@@ -1,0 +1,243 @@
+/*==========================
+ GOOGLE FONT
+==========================*/
+@import 
+url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&dis
+play=swap');
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ scroll-behavior:smooth;
+ font-family:'Poppins',sans-serif;
+}
+/*==========================
+ COLORS
+==========================*/
+:root{
+ --primary:#800000;
+ --secondary:#a52a2a;
+ --dark:#0f0f0f;
+ --light:#ffffff;
+ --gray:#777;
+ --card:rgba(255,255,255,.08);
+}
+body{
+ background:#111;
+ color:#fff;
+ overflow-x:hidden;
+}
+/*==========================
+ LOADER
+==========================*/
+#loader{
+ position:fixed;
+ inset:0;
+ background:#111;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ z-index:9999;
+}
+#loader h1{
+ color:var(--primary);
+ letter-spacing:3px;
+ animation:pulse 1s infinite;
+}
+@keyframes pulse{
+ 50%{
+ opacity:.4;
+ }
+}
+/*==========================
+ HEADER
+==========================*/
+header{
+ position:fixed;
+ top:0;
+ left:0;
+ width:100%;
+ padding:20px 10%;
+ background:rgba(0,0,0,.4);
+ backdrop-filter:blur(15px);
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ z-index:1000;
+}
+.logo{
+ font-size:30px;
+ font-weight:700;
+ color:#fff;
+}
+.logo span{
+ color:var(--primary);
+}
+nav ul{
+ display:flex;
+ list-style:none;
+ gap:30px;
+}
+nav a{
+ color:#fff;
+ text-decoration:none;
+ transition:.3s;
+ font-size:16px;
+}
+nav a:hover{
+ color:var(--primary);
+}
+.menu{
+ display:none;
+ color:#fff;
+ font-size:28px;
+ cursor:pointer;
+}
+/*==========================
+HERO
+==========================*/
+.hero{
+ min-height:100vh;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ gap:80px;
+ padding:120px 10%;
+}
+.hero-image img{
+ width:340px;
+ height:340px;
+ border-radius:50%;
+ object-fit:cover;
+ border:8px solid var(--primary);
+ box-shadow:0 0 40px rgba(128,0,0,.7);
+ transition:.5s;
+}
+.hero-image img:hover{
+ transform:scale(1.05);
+}
+.hero-content{
+ max-width:650px;
+}
+.hero-content h1{
+ font-size:60px;
+ margin-bottom:10px;
+}
+.hero-content h2{
+ color:var(--primary);
+ margin-bottom:15px;
+}
+.typing{
+ color:#ddd;
+ margin-bottom:20px;
+}
+.hero-content p{
+ color:#bbb;
+ line-height:1.8;
+}
+.buttons{
+ margin-top:35px;
+}
+.btn,
+.btn2{
+ display:inline-block;
+ padding:14px 35px;
+ border-radius:40px;
+ text-decoration:none;
+ margin-right:15px;
+ transition:.4s;
+}
+.btn{
+ background:var(--primary);
+ color:#fff;
+}
+.btn:hover{
+ background:#fff;
+ color:#800000;
+}
+.btn2{
+ border:2px solid var(--primary);
+ color:#fff;
+}
+.btn2:hover{
+ background:var(--primary);
+}
+/*==========================
+SECTION TITLE
+==========================*/
+section{
+ padding:100px 10%;
+}
+.title{
+ text-align:center;
+ font-size:40px;
+ margin-bottom:50px;
+ color:var(--primary);
+}
+/*==========================
+CARD
+==========================*/
+.card{
+ background:var(--card);
+ backdrop-filter:blur(18px);
+ border:1px solid rgba(255,255,255,.1);
+ border-radius:18px;
+ padding:35px;
+ transition:.4s;
+}
+.card:hover{
+ transform:translateY(-8px);
+ box-shadow:0 10px 25px rgba(128,0,0,.4);
+}
+/*==========================
+SKILLS
+==========================*/
+.skill{
+ margin-bottom:25px;
+ font-size:18px;
+}
+.bar{
+ width:100%;
+ height:12px;
+ background:#222;
+ border-radius:20px;
+ overflow:hidden;
+ margin-top:10px;
+}
+.bar span{
+ display:block;
+ height:100%;
+ background:linear-gradient(90deg,#800000,#b22222);
+ border-radius:20px;
+}
+/*==========================
+GRID
+==========================*/
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+ gap:30px;
+}
+.service,
+.project{
+ background:var(--card);
+ backdrop-filter:blur(15px);
+ padding:30px;
+ border-radius:20px;
+ text-align:center;
+ transition:.4s;
+}
+.service:hover,
+.project:hover{
+ transform:translateY(-10px);
+ box-shadow:0 10px 30px rgba(128,0,0,.5);
+}
+.service i{
+ font-size:45px;
+ color:var(--primary);
+ margin-bottom:20px;
+}
+.project img{
+ width:100%;
+ border-radius:15px;
+}
